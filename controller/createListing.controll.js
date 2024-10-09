@@ -12,6 +12,7 @@ const createListing = async (req, res, next) => {
 };
  const deleteListing = async (req, res, next) => {
     const listing = await Listing.findById(req.params.id);
+
   
     if (!listing) {
       return next(errorHandler(404, 'Listing not found!'));
@@ -69,4 +70,4 @@ const  getListing=async(req,res,next)=>{
 }
   
 
-module.exports = { createListing,deleteListing, updateListing,getListing};
+module.exports = { createListing,deleteListing, updateListing, getListing};
