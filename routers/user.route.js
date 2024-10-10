@@ -6,7 +6,7 @@ const {verifyToken }=require('../utills/verifyUser')
 router.post('/update/:id', verifyToken, updateUser);
 router.delete('/delete/:id', verifyToken, deleteUser);
 router.get('/getuserlisting/:id', verifyToken, getUserListings);
-router.get('getUser/:id', verifyToken, getUser);
+router.get('/:id', verifyToken, getUser);
  // Fixed the route path
 
 module.exports = router;
