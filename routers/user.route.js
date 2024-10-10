@@ -4,7 +4,7 @@ const { updateUser,deleteUser,getUserListings,getUser } = require('../controller
 const {verifyToken }=require('../utills/verifyUser')
 
 router.post('/update/:id', verifyToken, updateUser);
-// router.delete('/delete/:id', verifyToken, deleteUser);
+router.delete('/delete/:id', verifyToken, deleteUser);
 router.get('/getuserlisting/:id', verifyToken, getUserListings);
 // router.post('/:id', verifyToken, getUser);
  // Fixed the route path
