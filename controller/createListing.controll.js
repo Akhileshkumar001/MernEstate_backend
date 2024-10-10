@@ -53,10 +53,14 @@ const createListing = async (req, res, next) => {
 const  getListing=async(req,res,next)=>{
     try{
         const ItemListing=await Listing.findById(req.params.id)
+        console.log("item", ItemListing);
+        
         if (!ItemListing) {
             return next(errorHandler(404, 'Listing not found!'));
           }
-        req.status(200).json({
+          console.log("item is rpi");
+          
+        res.status(200).json({
             ItemListing,
             message:"successfully get item"
         })
